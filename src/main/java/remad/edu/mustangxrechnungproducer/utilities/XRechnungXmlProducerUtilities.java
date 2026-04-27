@@ -1,0 +1,84 @@
+package remad.edu.mustangxrechnungproducer.utilities;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.Properties;
+
+import remad.edu.mustangxrechnungproducer.constants.XRechnungAppConstants;
+import remad.edu.mustangxrechnungproducer.exceptions.XRechnungXmlProducerUtilitiesException;
+
+/**
+ * Utilities for XRechnungXmlProducer
+ * 
+ * @author edu.remad
+ * @since 2026
+ */
+public final class XRechnungXmlProducerUtilities {
+
+	/**
+	 * private Constructor
+	 */
+	private XRechnungXmlProducerUtilities() {
+		// do not instantiate
+	}
+
+	/**
+	 * Converts {@link LocalDateTime} to {@link Date}
+	 * 
+	 * @param localeDateTime {@link LocalDateTime} to convert to {@link Date}
+	 * @return {@link Date}
+	 */
+	public static Date localeDateTimeToDate(LocalDateTime localeDateTime) {
+		try {
+			return Date.from(localeDateTime.toLocalDate().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+		} catch (Exception e) {
+			throw new XRechnungXmlProducerUtilitiesException(
+					"XRechnungXmlProducerUtilities error: LocaleDateTime was not converted to Date!", e);
+		}
+	}
+
+	/**
+	 * Add 30 days to localeDateTime and converts to {@link Date}
+	 * 
+	 * @param localeDateTime {@link LocalDateTime} plus 30 days and convert to
+	 *                       {@link Date}
+	 * @return {@link Date}
+	 */
+	public static Date localeDateTimePlus30Days(LocalDateTime localeDateTime) {
+		try {
+			return Date.from(localeDateTime.toLocalDate().atStartOfDay().plusDays(30).atZone(ZoneId.systemDefault())
+					.toInstant());
+		} catch (Exception e) {
+			throw new XRechnungXmlProducerUtilitiesException(
+					"XRechnungXmlProducerUtilities error: LocaleDateTime was not increased by 30 days and converted to Date!",
+					e);
+		}
+	}
+
+	/**
+	 * Creates properties for JUnit tests
+	 * 
+	 * @return {@link Properties}
+	 */
+	public static Properties ceateJUnitTestProperties() {
+		Properties customProperties = new Properties();
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_RECIPIENT_CUSTOM_VAT, "");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_BANK_DETAILS_BIC, "DEMOBIC");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_BANK_DETAILS_IBAN,
+				"DE89370400440532013000");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_COUNTRY, "Germany");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_COUNTRY_CODE, "DE");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_EMAIL, "john.doe@doesnotexist.com");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_FULLNAME, "John Doe");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_LEITWEG_ID, "63643643643646");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_PHONE, "+49743646546464");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_STREET_AND_HOUSE_NO, "Examplestreet 16A");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_TAX_ID, "TAX-ID-6366363");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_VAT_ID, "VAT_ID_723985");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_ZIP, "6536363");
+		customProperties.setProperty(XRechnungAppConstants.XRECHNUNG_SENDER_ZIP_LOCATION, "Hamburg");
+
+		return customProperties;
+	}
+}
