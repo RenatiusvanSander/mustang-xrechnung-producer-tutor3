@@ -1,4 +1,4 @@
-package remad.edu.mustangxrechnungproducer.constants;
+package edu.remad.mustangxrechnungproducer.constants;
 
 /**
  * Enum for Measured International Trade Codes

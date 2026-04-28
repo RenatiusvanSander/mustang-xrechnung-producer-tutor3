@@ -1,4 +1,4 @@
-package remad.edu.mustangxrechnungproducer;
+package edu.remad.mustangxrechnungproducer;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -14,16 +14,16 @@ import org.mustangproject.TradeParty;
 import org.mustangproject.ZUGFeRD.Profiles;
 import org.mustangproject.ZUGFeRD.ZUGFeRD2PullProvider;
 
+import edu.remad.mustangxrechnungproducer.constants.UnitsOfMeasureUsedInInternationalTradeCodes;
+import edu.remad.mustangxrechnungproducer.constants.XRechnungAppConstants;
+import edu.remad.mustangxrechnungproducer.constants.XRechnungXmlProducerConstants;
+import edu.remad.mustangxrechnungproducer.exceptions.XRechnungProducerException;
+import edu.remad.mustangxrechnungproducer.models.FourWeeksTutoringPaymentTerms;
+import edu.remad.mustangxrechnungproducer.utilities.XRechnungXmlProducerUtilities;
 import edu.remad.tutoring3.persistence.models.AddressEntity;
 import edu.remad.tutoring3.persistence.models.InvoiceEntity;
 import edu.remad.tutoring3.persistence.models.ServiceContractEntity;
 import edu.remad.tutoring3.persistence.models.UserEntity;
-import remad.edu.mustangxrechnungproducer.constants.UnitsOfMeasureUsedInInternationalTradeCodes;
-import remad.edu.mustangxrechnungproducer.constants.XRechnungAppConstants;
-import remad.edu.mustangxrechnungproducer.constants.XRechnungXmlProducerConstants;
-import remad.edu.mustangxrechnungproducer.exceptions.XRechnungProducerException;
-import remad.edu.mustangxrechnungproducer.models.FourWeeksTutoringPaymentTerms;
-import remad.edu.mustangxrechnungproducer.utilities.XRechnungXmlProducerUtilities;
 
 /**
  * Produces from invoice a XRechnung.xml as byte array.

@@ -1,4 +1,4 @@
-package remad.edu.mustangxrechnungproducer.models;
+package edu.remad.mustangxrechnungproducer.models;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

@@ -1,4 +1,4 @@
-package remad.edu.mustangxrechnungproducer.exceptions;
+package edu.remad.mustangxrechnungproducer.exceptions;
 
 /**
  * Exception for XRechnungProducer

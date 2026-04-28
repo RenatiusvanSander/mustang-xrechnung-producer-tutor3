@@ -1,4 +1,4 @@
-package remad.edu.mustangxrechnungproducer.models;
+package edu.remad.mustangxrechnungproducer.models;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

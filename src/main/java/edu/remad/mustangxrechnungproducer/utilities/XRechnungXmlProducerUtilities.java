@@ -1,12 +1,12 @@
-package remad.edu.mustangxrechnungproducer.utilities;
+package edu.remad.mustangxrechnungproducer.utilities;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.Properties;
 
-import remad.edu.mustangxrechnungproducer.constants.XRechnungAppConstants;
-import remad.edu.mustangxrechnungproducer.exceptions.XRechnungXmlProducerUtilitiesException;
+import edu.remad.mustangxrechnungproducer.constants.XRechnungAppConstants;
+import edu.remad.mustangxrechnungproducer.exceptions.XRechnungXmlProducerUtilitiesException;
 
 /**
  * Utilities for XRechnungXmlProducer

@@ -1,4 +1,4 @@
-package remad.edu.mustangxrechnungproducer;
+package edu.remad.mustangxrechnungproducer;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -17,12 +17,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import edu.remad.mustangxrechnungproducer.XRechnungXmlProducer;
+import edu.remad.mustangxrechnungproducer.utilities.XRechnungXmlProducerUtilities;
 import edu.remad.tutoring3.persistence.models.AddressEntity;
 import edu.remad.tutoring3.persistence.models.InvoiceEntity;
 import edu.remad.tutoring3.persistence.models.PriceEntity;
 import edu.remad.tutoring3.persistence.models.ServiceContractEntity;
 import edu.remad.tutoring3.persistence.models.UserEntity;
-import remad.edu.mustangxrechnungproducer.utilities.XRechnungXmlProducerUtilities;
 
 /**
  * Tests for {@link XRechnungXmlProducer}
