@@ -28,7 +28,7 @@ public class FourWeeksTutoringPaymentTerms implements IZUGFeRDPaymentTerms {
 
 	@Override
 	public IZUGFeRDPaymentDiscountTerms getDiscountTerms() {
-		return new FourWeeksTutoringPaymentDiscountTerms();
+		return null;
 	}
 
 }

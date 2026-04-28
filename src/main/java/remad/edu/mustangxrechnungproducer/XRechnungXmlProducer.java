@@ -27,6 +27,9 @@ import remad.edu.mustangxrechnungproducer.utilities.XRechnungXmlProducerUtilitie
 
 /**
  * Produces from invoice a XRechnung.xml as byte array.
+ * 
+ * @author edu.remad
+ * @since 2026
  */
 public class XRechnungXmlProducer {
 
