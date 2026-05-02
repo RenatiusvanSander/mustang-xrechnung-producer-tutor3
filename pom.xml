@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>edu.remad</groupId>
 			<artifactId>tutoring3-models</artifactId>
-			<version>0.50.2-SNAPSHOT</version>
+			<version>0.60.2-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
